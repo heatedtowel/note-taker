@@ -41,15 +41,14 @@ app.post('/api/notes', (req, res) => {
   }
 })
 
-/* app.delete('/api/notes/:id', (req, res) => {
-  const noteId = req.params.id;
-  console.log(id)
-
-  fs.readFileSync
-  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
-
-  console.log(data)
-}) */
+app.delete('/api/notes/:id', (req, res) => {
+  const notes = JSON.parse((fs.readFileSync('./db/db.json', 'utf8')));
+  const Id = req.params.id;
+  const removedNote = notes.splice(notes.findIndex(value => value.id === Id), 1);
+  fs.writeFileSync('./db/db.json', JSON.stringify(notes, null, 2));
+  res.json(notes);
+  console.log(`Note deleted ${JSON.stringify(removedNote, null, 2)}`);
+});
 
 
 app.listen(PORT, () =>
