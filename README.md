@@ -3,7 +3,7 @@
 Do you want to be able to write and save notes so you can keep your day organized and keep track of your random thoughts?
 Just save a note to the app and it will be there when you get back, once your done with it just delete it and make another one. Store as many as you need to keep your day productive and stay on top of things. 
 
-<img src="public\assets\Note Taker.png" alt="note taking app" width="500"/>
+<img src="images\Note Taker.png" alt="note taking app" width="500"/>
 
 ## Link
 
